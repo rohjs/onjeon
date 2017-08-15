@@ -1,0 +1,135 @@
+.apply
+  pb($unit * 6)
+  .section__title
+    ta(center)
+
+.apply__form
+  mt($unit * 3)
+  pos()
+  col(12)
+  +afterTablet()
+    col(9)
+  +afterDesktop()
+    col(7)
+
+
+.apply__item
+  w()
+  mb($unit)
+  flex(column)
+  label
+    mb(10px)
+    span
+      pos()
+      fs($base)
+      lh()
+      &::after
+        content: '*'
+        color: $blue
+        ml(4px)
+
+  input
+    block()
+    h(45px)
+    border-radius: 4px
+    flex-grow: 1
+  select
+    block()
+    h(45px)
+    border-radius: 4px
+    flex-grow: 1
+  textarea
+    block()
+    h(310px)
+    border-radius: 4px
+
+.apply__file
+  pos()
+
+#apply_file
+  pos(absolute)
+  t(0)
+  l(0)
+  opacity: 0
+.dummy__file
+  block()
+  h(45px)
+  border-radius: 4px
+  border: 1px solid $border
+  flex-grow: 1
+  p
+    fs(12px)
+    lh(45px)
+    pl(16px)
+    color: $sub
+
+[for="apply_title"]
+  +tilTablet()
+    &::after
+      right 80px !important
+[for="apply_user"]
+  +tilTablet()
+    &::after
+      right 69px !important
+[for="apply_oneline"]
+  +tilTablet()
+    &::after
+      right 104px !important
+[for="apply_team"]
+  +tilTablet()
+    &::after
+      right 108px !important
+[for="apply_desc"]
+  +tilTablet()
+    &::after
+      right 82px !important
+
+.author__profile
+  flex()
+  flex-wrap: wrap
+  +tilTablet()
+    justify-content: center
+
+.author__img
+  flex()
+  jc(center)
+  ai(center)
+  block()
+  w(80px)
+  h(80px)
+  mr(40px)
+  border-radius: 100px
+  overflow: hidden
+  +tilTablet()
+    mr(0)
+  img
+    w(100%)
+    h(auto)
+
+.author__info
+  w(auto)
+  flex-grow: 1
+  +tilTablet()
+    w()
+    p(0 10px)
+    ta(center)
+    mt(16px)
+    mb(16px)
+  h5
+    fs(15px)
+    lh(2.666666667)
+    fw(normal)
+    +tilTablet()
+      ta(center)
+
+
+.author__detail
+  w()
+  flex()
+  jc(space-between)
+  fs(13px)
+  lh(16px)
+  flex-wrap: wrap
+  color: $sub
+  +tilTablet()
+    w(100%)

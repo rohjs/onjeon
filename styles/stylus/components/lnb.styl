@@ -1,0 +1,34 @@
+.main__header
+  row()
+  jc()
+  pt(80px)
+
+.lnb
+  flex()
+  pr(10px)
+  pl(10px)
+  li
+    pl(16px)
+    pr(16px)
+    color: $sub
+    &:first-child
+      pl(0)
+    a
+      block()
+      lh(48px)
+  .on
+    pos()
+    fw(bold)
+    block()
+    transition: all 0.2s ease-in-out
+    color: $body
+    &::after
+      content: ''
+      pos(absolute)
+      b(4px)
+      l(0)
+      w()
+      h(3px)
+      bgc($body)
+      transition: all 0.2s ease-in-out
+

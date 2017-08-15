@@ -1,0 +1,32 @@
+.subcard__container
+  @extend .mypage__card
+  mt($unit * 2)
+  +tilMobile()
+    mt($unit)
+
+.subcard
+  p(15px)
+  border-radius: 4px
+  bgc($bg-lightgrey)
+  .team &
+    flex()
+    bgc($grey-01)
+
+.subcard__header
+  flex()
+  jc()
+  mb($unit)
+  > *
+    lh($unit * 2)
+  a
+    fs(14px)
+    color: $sub
+  p
+    margin-top: 0 !important
+    fs(14px)
+    color: $sub
+
+.subcard__head
+  fs($base)
+
+

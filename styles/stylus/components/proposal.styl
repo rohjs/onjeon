@@ -1,0 +1,27 @@
+.proposal__contents
+  col(12)
+  padding-top: $unit * 2 !important
+  mb($unit * 2)
+  +afterTablet()
+    col(10)
+    push(1)
+    padding-top: $unit * 3 !important
+    mb($unit * 3)
+  +afterDesktop()
+    col(8)
+    push(2)
+  p
+    m($unit 0)
+    &+img
+      mt($unit * 1.5)
+      +afterTablet()
+        mt($unit * 2)
+  img
+    block()
+    w()
+    h(auto)
+    m($unit 0)
+    &+p
+      mt($unit * 1.5)
+      +afterTablet()
+        mt($unit * 2)

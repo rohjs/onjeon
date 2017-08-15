@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>온전  |  작품 등록하기</title>
+  <link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body class="apply__body">
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="header__contents">
+        <h1 class="title">
+          <img src="./assets/title-apply.svg"
+            alt="온전">
+        </h1>
+        <p>
+          여기에 심쿵한 문구를<br>
+          준비하는게 좋을 것 같소
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="gnb">
+  <h2 class="sr-only">메뉴</h2>
+  <div class="container">
+    <ul class="gnb__list">
+      <li>
+        <a href="./index.html">온전소개</a>
+      </li>
+      <li>
+        <a class="on"
+          href="./show.html">작품보기</a>
+      </li>
+      <li>
+        <a href="./notice.html">공지사항</a>
+      </li>
+      <li>
+        <a class="lnb__signin"
+          href="./signup.html">로그인</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main id="main">
+  <section class="apply">
+    <div class="container">
+      <div class="row"
+        style="justify-content: center">
+        <form class="apply__form">
+          <div class="apply__item">
+            <label for="apply_title"><span>작품 제목</span></label>
+            <input type="text"
+              id="apply_title"
+              required="true"
+              placeholder="20자 이내로 입력해주세요. 메인에 표시됩니다."
+              maxlength="20"
+          ></div>
+          <div class="apply__item">
+            <label for="apply_title"><span>작가 정보</span></label>
+            <div class="author__profile">
+              <a class="author__img"
+                href="./mypage.html">
+                <img srcset="./assets/img-author.jpg 1x,./assets/img-author@2x.jpg 2x"
+                  alt >
+              </a>
+              <section class="author__info">
+                <h5>노지승</h5>
+                <ul class="author__detail">
+                  <li>
+                    <a href="mailto:jiseung.roh@gmail.com">jiseung.roh@gmail.com</a>
+                  </li>
+                  <li>
+                    여/25세
+                  </li>
+                  <li>
+                    프리랜서 디자이너
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="apply__item">
+            <label for="apply_desc"><span>작품 소개</span></label>
+            <textarea id="apply_desc" required="true"></textarea>
+          </div>
+          <div class="apply__item">
+            <label for="apply_file"><span>작품 사진 등록</span></label>
+            <div class="apply__file">
+              <div class="dummy__file"
+                aria-hidden="true">
+                <p>사진의 사이즈는 600*600(px) 이상을 권장합니다.</p>
+              </div>
+              <input type="file"
+                id="apply_file"
+                required="true"
+              >
+            </div>
+          </div>
+          <button type="submit"
+            class="btn__submit">
+            등록하기
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <h2 class="footer__logo">
+        <img src="./assets/logo-footer.svg"
+          alt="온전">
+      </h2>
+      <p class="copyright"
+        lang="en">
+        Designed & published by Jiseung Roh
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.request__list
+  @extend .crew__list
+  mt(0)
+
+.request__item
+  @extend .mypage__card
+  .hit
+    bgc($softpurple)
+  .idea__user
+    pos()
+  .status
+    fs(13px)
+    pos(absolute)
+    t(50%)
+    r(0)
+    color: $blue
+    transform: translateY(-50%)
+  &.rejected
+    .hit
+      opacity: .2
+      text-decoration: line-through
+      .status
+        color: $sub
+      &:hover
+        box-shadow: none
+

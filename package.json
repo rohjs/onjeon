@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "style": "stylus -w styles/stylus/style.styl -o styles/css/style.css"
+  }
+}

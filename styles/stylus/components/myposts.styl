@@ -1,0 +1,52 @@
+.myposts__header
+  l(10px)
+.myposts__list
+  col(12)
+  flex()
+  flex-wrap: wrap
+  p(0)
+  +afterDesktop()
+    col(8)
+  li
+    mb($unit)
+    col(12)
+    +afterMobile()
+      col(6)
+  a
+    block()
+    pos()
+    &:hover
+      .myposts__info
+        opacity: 1
+        bottom: 0
+
+.myposts__img
+  pos()
+  block()
+  h(0)
+  pb(100%)
+  overflow: hidden
+  img
+    pos(absolute)
+    w(100%)
+    h(auto)
+
+.myposts__info
+  pos(absolute)
+  w()
+  b(-30px)
+  l(0)
+  p(16px)
+  bgc(rgba($white, .9))
+  opacity: 0
+  transition: all 0.2s ease-in-out
+  h4
+    mb(8px)
+    fs(16px)
+    lh(24px)
+    fw(normal)
+  p
+    fs(11px)
+    lh(16px)
+
+

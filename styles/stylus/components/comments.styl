@@ -1,0 +1,32 @@
+.comments
+  .comment__contents
+    p
+      mt($unit)
+      fs(13px)
+      lh(1.7692307692)
+      max-height: 46px
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+    span
+      mt(20px)
+      fs(11px)
+      lh(20px)
+      color: $sub
+
+.comments__head
+  @extend .subcard__head
+
+.comments
+  @extend .subcard__container
+
+.comments__header
+  @extend .subcard__header
+
+.comment__item
+  @extend .subcard
+  &:not(:last-child)
+    mb($unit)
+

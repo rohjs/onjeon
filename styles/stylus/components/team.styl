@@ -1,0 +1,13 @@
+.team
+  @extend .subcard__container
+
+.team__header
+  @extend .subcard__header
+
+.team__item
+  @extend .subcard
+  jc()
+  &:not(:last-child)
+    mb($unit)
+
+

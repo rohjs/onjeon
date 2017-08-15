@@ -1,0 +1,199 @@
+// =media query
+onlyTablet()
+  @media (min-width: $mobile + 1) and (max-width: $tablet)
+    {block}
+
+onlyDesktop()
+  @media (min-width: $tablet + 1) and (max-width: $desktop)
+    {block}
+
+onlyWide()
+  @media (min-width: $desktop + 1) and (max-width: $wide)
+    {block}
+
+afterMobile()
+  @media (min-width: $mobile + 1)
+    {block}
+
+afterTablet()
+  @media (min-width: $tablet + 1)
+    {block}
+
+afterDesktop()
+  @media (min-width: $desktop + 1)
+    {block}
+
+afterWide()
+  @media (min-width: $wide + 1)
+    {block}
+
+tilMobile()
+  @media (max-width: $mobile)
+    {block}
+
+tilTablet()
+  @media (max-width: $tablet)
+    {block}
+
+tilDesktop()
+  @media (max-width: $desktop)
+    {block}
+
+tilWide()
+  @media (max-width: $wide)
+    {block}
+
+
+
+
+// =align
+block()
+  display: block
+
+inblock()
+  display: inline-block
+
+flex($dir = row)
+  display: flex
+  flex-direction: $dir
+
+jc($jc = space-between)
+  justify-content: $jc
+
+ai($ai = center)
+  align-items: $ai
+
+
+fx-row()
+  d-flex()
+
+fx-col()
+  d-flex(column)
+
+center()
+  flex()
+  jc(center)
+  ai()
+
+
+
+// =typography
+ff($ff)
+  font-family: $ff
+
+fs($fs = $base)
+  font-size: $fs
+
+fw($fw = normal)
+  font-weight: $fw
+
+lh($lh = 1)
+  line-height: $lh
+
+ta($ta)
+  text-align: $ta
+
+
+// =sizing
+m($m = 0)
+  margin: $m
+
+mt($m = 0)
+  margin-top: $m
+
+mb($m = 0)
+  margin-bottom: $m
+
+ml($m = 0)
+  margin-left: $m
+
+mr($m = 0)
+  margin-right: $m
+
+p($p = 0)
+  padding: $p
+
+pt($p = 0)
+  padding-top: $p
+
+pb($p = 0)
+  padding-bottom: $p
+
+pl($p = 0)
+  padding-left: $p
+
+pr($p = 0)
+  padding-right: $p
+
+w($w = 100%)
+  width: $w
+
+h($h = 100%)
+  height: $h
+
+size($w = 100%, $h = auto)
+  w($w)
+  h($h)
+
+
+// =position
+pos($pos = relative)
+  position: $pos
+
+t($t = 0)
+  top: $t
+
+b($b = 0)
+  bottom: $b
+
+l($l = 0)
+  left: $l
+
+r($r = 0)
+  right: $r
+
+
+// =background
+
+bgi($i)
+  background-image: $i
+
+bgc($c)
+  background-color: $c
+
+bgp($x = center, $y = center)
+  background-position: $x $y
+
+bgs($s)
+  background-size: $s
+
+bgr($r = no-repeat)
+  background-repeat: $r
+
+bg($i)
+  bgi($i)
+  bgp()
+  bgr()
+
+
+
+// =grid
+row()
+  flex()
+  flex-wrap: wrap
+  m(0 -10px)
+
+col($n = 12)
+  w(percentage($n/12))
+  p(0 $pd)
+
+push($n = 12)
+  pos()
+  l(percentage($n/12))
+
+pull($n = 12)
+  pos()
+  r(percentage($n/12))
+
+offset($n = 12)
+  ml(percentage($n/12))

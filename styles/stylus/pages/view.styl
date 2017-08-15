@@ -1,0 +1,94 @@
+.view
+  padding-top: $unit * 4 !important
+  +afterTablet()
+    padding-top: $unit * 6 !important
+  .header__contents
+    col(12)
+    +afterTablet()
+      col(10)
+      push(1)
+    +afterDesktop()
+      col(8)
+      push(2)
+
+  .header__user
+    @extend .idea__user
+    mb($unit * 1.5)
+  .header__head
+    fs(45px)
+    lh(1.3)
+    +afterTablet()
+      fs(55px)
+  .header__text
+    mt($unit * 1)
+    fs(14px)
+    lh(1.8571428571)
+    +afterTablet()
+      mt($unit * 2)
+  .header__info
+    flex()
+    jc()
+    ai(flex-start)
+    mt($unit * 2)
+    +tilMobile()
+      flex-wrap: wrap
+  .header__info_item
+    mb($unit * 2)
+    flex-grow: 1
+    w(50%)
+    &:nth-child(2)
+      +tilMobile()
+        display: none
+    h4
+      fs($base)
+      lh(20px)
+    p
+      fs(30px)
+      lh(60px)
+      fw(700)
+      +afterTablet()
+        fs(40px)
+      span
+        fs(20px)
+  .header__info__members
+    h4
+      @extend .view .header__info_item h4
+      mb($unit)
+    .header__member__list
+      flex()
+      ai(flex-end)
+      jc(flex-start)
+      flex-wrap: wrap
+      width: calc( 100% - 70px)
+  .header__members
+    flex()
+    jc(flex-start)
+    ai(flex-start)
+    flex-wrap: wrap
+  .header__member
+    @extend .idea__user
+    pos()
+    mr(8px)
+    mb(5px)
+    &.captain
+      mr(20px)
+      .user__img
+        w(50px)
+        h(50px)
+      &::after
+        content: ''
+        pos(absolute)
+        b(-25px)
+        l(50%)
+        transform: translateX(-50%)
+        w(13px)
+        h(17px)
+        bg(url(../../assets/icon-captain@2x.png))
+        bgs(contain)
+    .user__img
+      mr()
+      w(35px)
+      h(35px)
+
+
+

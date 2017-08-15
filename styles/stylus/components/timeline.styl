@@ -1,0 +1,28 @@
+.timeline
+  +afterTablet()
+    pt($unit * 5)
+    pb($unit * 4)
+  .section__title
+    mb($unit * 4)
+    col(12)
+    ta(center)
+
+.timeline__contents
+  col(12)
+  +afterTablet()
+    col(10)
+    push(1)
+.timeline__img
+  w()
+  h(auto)
+  &.wide
+    display: none
+    +afterDesktop()
+      block()
+  &.small
+    +afterDesktop()
+      display: none
+    &:last-child
+      mt($unit * 1.5)
+      +afterTablet()
+        mt($unit * 3)

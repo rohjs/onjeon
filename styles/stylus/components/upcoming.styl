@@ -1,0 +1,71 @@
+.upcoming
+  pt(72px)
+  pb(128px)
+.upcoming__info
+  +afterTablet()
+    flex()
+    jc(space-between)
+    flex-wrap: wrap
+    ai(flex-end)
+    pt(76px)
+
+.upcoming__title
+  col(12)
+
+.upcoming__date
+  fs(24px)
+  lh()
+  mb(24px)
+
+.upcoming__text
+  w(100%)
+
+.upcoming__contents
+  w()
+  +afterTablet()
+    mt($unit*3)
+    flex()
+    jc(space-between)
+    ai(flex-start)
+
+.upcoming__info
+  col(12)
+  +afterTablet()
+    col(5)
+
+.upcoming__images
+  col(12)
+  mt($unit*2)
+  +afterTablet()
+    col(6)
+    flex()
+    mt()
+.upcoming__image
+  w()
+  pos()
+  h(0)
+  pb(100%)
+  mb(10px)
+  overflow: hidden
+  +afterTablet()
+    w(50%)
+    mr($pd)
+    pb(50%)
+    mb()
+  &:last-child
+    mr(0)
+  flex()
+  img
+    w(100%)
+    h(auto)
+    pos(absolute)
+    t(50%)
+    l(50%)
+    transform: translate(-50%, -50%)
+
+
+
+.link__more
+  block()
+  mt(24px)
+  text-decoration: underline

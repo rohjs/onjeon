@@ -1,0 +1,60 @@
+.replies
+  .section__header
+    col(12)
+    +afterTablet()
+      col(10)
+      push(1)
+    +afterDesktop()
+      col(8)
+      push(2)
+  .section__title
+    pl(0)
+    mb($unit)
+
+.reply__list
+  @extend .replies .section__header
+  .reply
+    border-radius: 4px
+    bgc($bg-grey)
+    p($unit)
+    mb($unit)
+    .reply__header
+      @extend .idea__user
+      pos()
+    .reply__contents
+      @extend .comments .comment__contents
+
+.reply__item.myself
+  .reply
+    bgc($bg-skyblue)
+
+.reply__control
+  pos(absolute)
+  r(0)
+  w(70px)
+  h(50px)
+  flex()
+  jc()
+  ai()
+
+.write__reply
+  @extend .replies .section__header
+  mb($unit * 1.5)
+  +afterTablet()
+    mb($unit * 2)
+  textarea
+    @extend .apply__item textarea
+    w()
+    h($unit * 8)
+    p($base)
+    mb($unit)
+  .btn__submit
+    mr(0)
+
+.reply__edit
+  textarea
+    @extend .write__reply textarea
+    mt($unit)
+  button
+    @extend .btn__submit
+    mr(0)

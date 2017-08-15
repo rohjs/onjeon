@@ -1,0 +1,30 @@
+#header
+  pt(50px)
+  border: 1px solid $border
+  bg(url(../../assets/img-cover.jpg))
+  bgp(bottom)
+  +afterTablet()
+    pt(56px)
+  .show &,
+  .apply__body &,
+  .mypage &
+    pb(80px)
+    bgi(none)
+
+.header__contents
+  col(12)
+  +afterTablet()
+    col(7)
+  +afterDesktop()
+    col(5)
+  .title
+    mt(64px)
+    mb(24px)
+  .onjeon
+    mt(64px)
+    mb(24px)
+  .onjeon__value
+    w()
+    img
+      w(90%)
+      h(auto)

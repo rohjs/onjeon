@@ -1,0 +1,40 @@
+#gnb
+  position: fixed
+  w()
+  t(0)
+  l()
+  jc(flex-end)
+  ai()
+  bgc(rgba($white, .9))
+  z-index: 1000
+
+.gnb__list
+  flex()
+  jc(flex-end)
+  ai(center)
+  h(56px)
+  pl(20px)
+  pr(20px)
+  li
+    pr(16px)
+    pl(16px)
+    white-space: nowrap
+    &:last-child
+      pr(0)
+    a
+      block()
+  .on
+    pos()
+    fw(bold)
+    transition: all 0.2s ease-in-out
+    &::after
+      content: ''
+      pos(absolute)
+      b(-4px)
+      l(0)
+      w()
+      h(3px)
+      bgc($blue)
+      transition: all 0.2s ease-in-out
+  .lnb__signin
+    color: $blue

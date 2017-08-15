@@ -1,0 +1,54 @@
+.crew__container
+
+
+.crew__leader
+  @extend .mypage__card
+  @extend .idea__user
+  +tilTablet()
+    jc(center)
+    ai()
+    flex-direction: column
+  .user__img
+    w(70px)
+    h(70px)
+    mb(10px)
+    mr(0)
+    +afterTablet()
+      mr(15px)
+      w(100px)
+      h(100px)
+      mb(0)
+  .user__info
+    &::before
+      content: ''
+      pos()
+      t(4px)
+      inblock()
+      w(13px)
+      h(17px)
+      bgi(url(../../assets/icon-captain@2x.png))
+      bgs(contain)
+      bgp(left, top)
+    span
+      +afterTablet()
+        pl(17px)
+
+
+.crew__idea
+  @extend .mypage__card
+
+.crew__list
+  row()
+  w()
+  mt($unit * 2)
+
+.crew__item
+  @extend .mypage__card
+  .idea__user
+    @extend .team__item
+    jc(flex-start)
+    bgc($skyblue)
+  &.myself
+    .idea__user
+      pos()
+      bgc(rgba($softblue, 0.1))

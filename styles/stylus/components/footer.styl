@@ -1,0 +1,21 @@
+#footer
+  p($unit 0)
+  border-top: 1px solid $border
+  +tilMobile()
+    ta(center)
+  .row
+    +afterTablet()
+      jc()
+  .footer__logo
+    col(12)
+    lh(22px)
+    mb(4px)
+    +afterTablet()
+      col(4)
+  .copyright
+    col(12)
+    fs(13px)
+    color: $sub
+    +afterTablet()
+      col(6)
+      ta(right)

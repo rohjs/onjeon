@@ -1,0 +1,68 @@
+.about
+  p($unit * 4 0)
+
+
+.about__contents
+  col(12)
+  +afterTablet()
+    col(7)
+  +afterDesktop()
+    col(6)
+
+.about__head
+  mb($unit * 2)
+  fs(40px)
+  fw(300)
+  lh(1.25)
+
+.about__subhead
+  mb($unit)
+  fs($base)
+  fw(bold)
+
+.about__img
+  col(12)
+  h(auto)
+  ta(center)
+  +tilTablet()
+    mt($unit * 3)
+    mb($unit * 3)
+  +afterTablet()
+    col(4)
+    push(1)
+  +afterDesktop()
+    push(2)
+
+
+.about__list
+  mt($unit * 3)
+  flex()
+  jc(space-between)
+  flex-wrap: wrap
+  mb($unit*4)
+  +afterTablet()
+    mt($unit * 6)
+  li
+    col(12)
+    mb($unit*2)
+    +afterTablet()
+      col(6)
+    +afterDesktop()
+      col(4)
+      mb()
+
+
+.about__text
+  col(12)
+  mt($unit)
+
+
+.about__item
+  pr($pd)
+  pl($pd)
+  w()
+  mb($unit*2)
+  +afterTablet()
+    col(6)
+  +afterDesktop()
+    mb(0)

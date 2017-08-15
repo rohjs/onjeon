@@ -1,0 +1,62 @@
+.profile
+  pt($unit * 3)
+  pb($unit * 4)
+
+.profile__contents
+  col(12)
+  flex()
+  jc()
+  ai()
+  +afterTablet()
+    col(10)
+    push(1)
+  +afterDesktop()
+    col(8)
+    push(2)
+
+.profile__user
+  w(85px)
+  h(85px)
+  flex()
+  jc(center)
+  ai()
+  border-radius: 100px
+  overflow: hidden
+  +afterTablet()
+    w(140px)
+    h(140px)
+  img
+    w()
+    h()
+
+.profile__info
+  w(60%)
+  +tilMobile()
+    w(70%)
+
+.profile__name
+  fs(20px)
+  lh(1.6666666667)
+  fw()
+  +afterMobile()
+    fs(24px)
+
+.profile__subinfo
+  +afterMobile()
+    flex()
+    jc()
+  .profile__text
+    fs(14px)
+    lh(20px)
+    color: $sub
+    strong
+      mr(10px)
+      color: $body
+      & + .profile__link
+        color: $blue
+        transition: all 0.2s ease-in-out
+        &:hover
+          color: $darkblue
+    span
+      block()
+

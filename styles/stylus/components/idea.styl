@@ -1,0 +1,79 @@
+.idea,
+.idea--write
+  transition: all 0.2s ease-in-out
+  opacity: 1
+  col(12)
+  h(280px)
+  mb($unit)
+  flex()
+  ai(stretch)
+  +afterMobile()
+    col(6)
+    h(300px)
+  +afterDesktop()
+    col(3)
+    h(320px)
+
+.idea .hit,
+.idea--write .hit
+  flex(column)
+  jc()
+  w()
+  p($unit)
+  border-radius: 4px
+
+.idea--write .hit
+  center()
+  w()
+  ta(center)
+  color: $white
+  transition: all 0.2s ease-in-out
+  &:hover,
+  &:focus,
+  &:active
+    bgc($grey-05)
+  h4
+    pt($unit * 2.5)
+    fw(400)
+    bg(url(../../assets/icon-add@2x.png))
+    bgp(center, top)
+    bgs(39px auto)
+
+.idea:nth-child(2n) .hit
+  bgc($grey-00)
+
+.idea:nth-child(2n-1) .hit
+  bgc($grey-01)
+
+.idea--write .hit
+  bgc($grey-04)
+
+.idea__votes
+  mb($unit * 2)
+  fs(40px)
+  fw(700)
+  lh()
+  color: $red
+  span
+    fs(20px)
+  .myidea &
+    mb(0)
+
+.ideas
+  pt($unit * 2)
+  pb($unit * 1.5)
+
+.idea__user
+  flex()
+  jc(flex-start)
+  ai()
+
+.idea__head
+  mb(10px)
+  fs(20px)
+  lh(1.35)
+
+.idea__text
+  fs(13px)
+  lh(1.538461538)
+  color: $sub

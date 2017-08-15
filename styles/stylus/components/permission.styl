@@ -1,0 +1,19 @@
+.permission__list
+  @extend .request__list
+
+.permission__item
+  @extend .request__item
+  +afterDesktop()
+    col(4)
+    push(0)
+    &:nth-child(2n-1)
+      offset(2)
+  .idea__user
+    @extend .crew__item .idea__user
+    bgc($softpurple)
+
+.permission__control
+  pos(absolute)
+  t(50%)
+  r(20px)
+  transform: translateY(-50%)

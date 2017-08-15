@@ -1,0 +1,100 @@
+.myposts
+  pb($unit * 5)
+
+.myposts__header
+  col(12)
+  +afterTablet()
+    col(10)
+    push(1)
+  +afterDesktop()
+    col(8)
+    push(2)
+  .myposts__title
+    pos()
+    p(0)
+    mb($unit)
+    fw(normal)
+    span
+      pr($unit)
+      bgc($white)
+
+.mypage__card
+  col(12)
+  mb($unit)
+  +afterTablet()
+    col(5)
+    push(1)
+  +afterDesktop()
+    col(4)
+    push(0)
+    &:nth-child(2n-1)
+      offset(2)
+  .hit
+    p(15px)
+    flex(column)
+    jc()
+    h(200px)
+    border-radius: 4px
+    bgc($bg-lightgrey)
+  &__vote
+    @extend .mypage__card
+    .hit
+      bgc($grey-04)
+      color: $white
+      center()
+      ta(center)
+      color: $white
+      transition: all 0.2s ease-in-out
+      &:hover,
+      &:focus,
+      &:active
+        bgc($grey-05)
+      h4
+        pt($unit * 2.5)
+        fw(400)
+        bg(url(../../assets/icon-add@2x.png))
+        bgp(center, top)
+        bgs(39px auto)
+
+.mypage__head
+  fs(20px)
+  lh(1.35)
+
+.mypage__text
+  mt(10px)
+  fs(13px)
+  lh(20px)
+  color: $sub
+
+.myidea
+  .idea__votes
+    mb(0)
+
+.myidea__config
+  @extend .mypage__card
+  flex()
+  jc(space-around)
+  ai()
+  mb($unit)
+  +afterTablet()
+    flex-direction: column
+    jc(center)
+    mb($unit * 2)
+  a
+    inblock()
+    vertical-align: middle
+    lh(40px)
+    transition: all 0.2s ease-in-out
+    &:hover
+      opacity: 0.5
+    &::before
+      content: ''
+      inblock()
+      w(35px)
+      h(20px)
+      bgs(contain)
+    &:first-child::before
+      bg(url(../../assets/icon-edit@2x.png))
+    &:last-child::before
+      bg(url(../../assets/icon-delete@2x.png))
+

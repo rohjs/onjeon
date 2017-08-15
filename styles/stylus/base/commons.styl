@@ -1,0 +1,90 @@
+@import '../helpers'
+
+*
+  box-sizing: border-box
+  ff($spoqa)
+
+html
+  fs()
+  lh($lh)
+  color: $body
+
+p
+  fs($base)
+  lh($lh)
+  color: $body
+
+a
+  text-decoration: none
+  color: inherit
+
+ul, ol
+  list-style-type: none
+  p()
+
+button
+  appearance: none
+
+input,
+textarea,
+select
+  p(10px)
+  border: 1px solid $border
+  transition: all 0.2s ease-in-out
+
+.disabled
+  bgc($bg-lightgrey)
+  color: $body
+
+input:focus,
+select:focus,
+textarea:focus
+  outline: none !important
+  border: 1px solid $border-focus
+
+.sr-only
+  position: absolute
+  w(1px)
+  h(1px)
+  t(0)
+  l(0)
+  visibility: hidden
+
+.ir {
+  text-indent: -9999px;
+}
+
+.container
+  pos()
+  w()
+  p(0 $pd)
+  m(0 auto)
+  +afterMobile()
+    w($mobile-c)
+  +afterTablet()
+    w($tablet-c)
+  +afterDesktop()
+    w($desktop-c)
+  +afterWide()
+    w($wide-c)
+
+.row
+  row()
+
+.vertical
+  ai()
+
+.horizontal
+  jc()
+
+.hit
+  block()
+  transition: box-shadow 0.2s ease-in-out
+.hit:focus,
+.hit:hover,
+.hit:active
+  box-shadow: $darkshadow
+
+.divider
+  w()
+  h(1px)
