@@ -139,7 +139,8 @@ textarea:focus {
 }
 .show #header,
 .apply__body #header,
-.mypage #header {
+#header .mypage,
+.notice #header {
   padding-bottom: 80px;
   background-image: none;
 }
@@ -730,6 +731,23 @@ textarea:focus {
   bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
+}
+.btn--subscribe {
+  display: inline-block;
+  padding: 16px;
+  line-height: 1;
+  position: relative;
+  right: 10px;
+  margin-top: 40px;
+  margin-left: 10px;
+  color: #4883ff;
+  border: 1px solid #4883ff;
+  transition: all 0.2s ease-in-out;
+}
+.btn--subscribe:hover,
+.btn--subscribe:focus {
+  background-color: rgba(72,131,255,0.95);
+  color: #fff;
 }
 .profile {
   padding-top: 60px;
@@ -1793,6 +1811,7 @@ textarea:focus {
 .lnb li a {
   display: block;
   line-height: 48px;
+  white-space: nowrap;
 }
 .lnb .on {
   position: relative;
@@ -1810,6 +1829,9 @@ textarea:focus {
   height: 3px;
   background-color: #4a4a4a;
   transition: all 0.2s ease-in-out;
+}
+.notice .lnb {
+  margin-bottom: 60px;
 }
 .myposts__header {
   left: 10px;
@@ -1878,6 +1900,59 @@ textarea:focus {
 .myposts__info p {
   font-size: 11px;
   line-height: 16px;
+}
+.notice__list {
+  margin-bottom: 80px;
+}
+.notice__list li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d6d9de;
+  margin-bottom: 40px;
+}
+.notice__list li:last-child {
+  border-bottom: none;
+}
+.notice__list h5 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.notice__list p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.notice__list a {
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+.notice__list a:hover {
+  opacity: 0.7;
+}
+.notice__tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+.notice__tags p {
+  font-size: 12px;
+  line-height: 16px;
+}
+.notice__date {
+  color: #979797;
+}
+.notice__tag {
+  display: inline-block;
+  min-width: 40px;
+  padding: 4px 8px;
+  line-height: 14px;
+  margin-left: 8px;
+  border-radius: 100px;
+  border: 1px solid rgba(72,131,255,0.8);
+  color: rgba(72,131,255,0.8);
 }
 .about {
   padding: 80px 0;

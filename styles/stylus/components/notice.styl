@@ -1,0 +1,47 @@
+.notice__list
+  mb($unit * 4)
+  li
+    pt($unit)
+    pb($unit)
+    border-bottom: 1px solid $border
+    mb($unit * 2)
+    &:last-child
+      border-bottom: none
+  h5
+    fs(24px)
+    lh(1.2)
+    fw(300)
+    mb($unit)
+  p
+    fs($base)
+    lh(24px)
+  a
+    block()
+    transition: all 0.2s ease-in-out
+    &:hover
+      opacity: .7
+
+.notice__tags
+  flex()
+  jc(flex-start)
+  ai()
+  mt($unit)
+  p
+    fs(12px)
+    lh(16px)
+
+.notice__date
+  color: $sub
+
+.notice__tag
+  display: inline-block
+  min-width: 40px
+  p(4px 8px)
+  lh(14px)
+  ml(8px)
+  border-radius: 100px
+  border: 1px solid rgba($blue, .8)
+  color: rgba($blue, .8)
+
+
+

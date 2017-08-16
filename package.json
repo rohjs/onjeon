@@ -1,9 +1,16 @@
 {
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylus": "stylus -w styles/stylus/style.styl -o styles/css/style.css"
+  },
+  "author": "Jiseung Roh",
+  "license": "ISC",
   "dependencies": {
     "autoprefixer-stylus": "^0.14.0",
     "stylus": "^0.54.5"
-  },
-  "scripts": {
-    "style": "stylus -w styles/stylus/style.styl -o styles/css/style.css"
   }
 }

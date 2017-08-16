@@ -138,3 +138,19 @@
   b(-80px)
   l(50%)
   transform: translateX(-50%)
+
+.btn--subscribe
+  display: inline-block
+  p(16px)
+  lh()
+  pos()
+  r(10px)
+  mt($unit * 2)
+  ml($pd)
+  color: $blue
+  border: 1px solid $blue
+  transition: all 0.2s ease-in-out
+  &:hover,
+  &:focus
+    bgc(rgba($blue, .95))
+    color: $white
