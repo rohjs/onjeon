@@ -1,0 +1,70 @@
+#view__header
+  ta(center)
+
+.view__summary,
+.view__utility
+  col(12)
+
+.view__utility
+  mb($unit * 4)
+
+.view__title
+  ff($batang)
+  fs(40px)
+  lh(1.4)
+  mb(12px)
+
+.view__author
+  fs(1rem)
+  fw(400)
+
+.btn--vote,
+.btn--like
+  @extend .btn--subscribe
+  white-space nowrap
+  width auto !important
+  line-height 1
+
+.work
+  col(12)
+.work__img
+  w()
+  h(auto)
+  m(0 auto)
+  +afterTablet()
+    w(80%)
+  +afterDesktop()
+    w(60%)
+
+.work__desc
+  w(80%)
+  m(0 auto)
+  mb($unit*3)
+  p
+    mb(1rem)
+
+.comments
+  w(60%)
+  m(0 auto)
+  mt($unit * 3)
+.comments__heading
+  fw(400)
+  fs(18px)
+  lh()
+  mb($unit * 2)
+
+.comments__list
+  mb($unit * 5)
+  li
+    mb($unit * 1.5)
+  .comment
+    flex()
+    flex-wrap: wrap
+    h5
+      mr(8px)
+      fs(1rem)
+      lh(1.5)
+    p
+      fs(1rem)
+      lh(1.5)
+

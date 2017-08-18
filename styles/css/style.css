@@ -139,8 +139,9 @@ textarea:focus {
 }
 .show #header,
 .apply__body #header,
-#header .mypage,
-.notice #header {
+.mypage #header,
+.notice #header,
+.view #header {
   padding-bottom: 80px;
   background-image: none;
 }
@@ -732,7 +733,9 @@ textarea:focus {
   left: 50%;
   transform: translateX(-50%);
 }
-.btn--subscribe {
+.btn--subscribe,
+.btn--vote,
+.btn--like {
   display: inline-block;
   padding: 16px;
   line-height: 1;
@@ -745,7 +748,11 @@ textarea:focus {
   transition: all 0.2s ease-in-out;
 }
 .btn--subscribe:hover,
-.btn--subscribe:focus {
+.btn--vote:hover,
+.btn--like:hover,
+.btn--subscribe:focus,
+.btn--vote:focus,
+.btn--like:focus {
   background-color: rgba(72,131,255,0.95);
   color: #fff;
 }
@@ -891,11 +898,7 @@ textarea:focus {
 .crew__idea__vote,
 .crew__idea,
 .crew__item__vote,
-.crew__item,
-.request__item__vote,
-.request__item,
-.permission__item__vote,
-.permission__item {
+.crew__item {
   width: 100%;
   padding: 0 10px;
   margin-bottom: 20px;
@@ -918,11 +921,7 @@ textarea:focus {
   .crew__idea__vote,
   .crew__idea,
   .crew__item__vote,
-  .crew__item,
-  .request__item__vote,
-  .request__item,
-  .permission__item__vote,
-  .permission__item {
+  .crew__item {
     width: 41.66666666666667%;
     padding: 0 10px;
     position: relative;
@@ -947,11 +946,7 @@ textarea:focus {
   .crew__idea__vote,
   .crew__idea,
   .crew__item__vote,
-  .crew__item,
-  .request__item__vote,
-  .request__item,
-  .permission__item__vote,
-  .permission__item {
+  .crew__item {
     width: 33.33333333333333%;
     padding: 0 10px;
     position: relative;
@@ -974,11 +969,7 @@ textarea:focus {
   .crew__idea__vote:nth-child(2n-1),
   .crew__idea:nth-child(2n-1),
   .crew__item__vote:nth-child(2n-1),
-  .crew__item:nth-child(2n-1),
-  .request__item__vote:nth-child(2n-1),
-  .request__item:nth-child(2n-1),
-  .permission__item__vote:nth-child(2n-1),
-  .permission__item:nth-child(2n-1) {
+  .crew__item:nth-child(2n-1) {
     margin-left: 16.666666666666664%;
   }
 }
@@ -999,11 +990,7 @@ textarea:focus {
 .crew__idea__vote .hit,
 .crew__idea .hit,
 .crew__item__vote .hit,
-.crew__item .hit,
-.request__item__vote .hit,
-.request__item .hit,
-.permission__item__vote .hit,
-.permission__item .hit {
+.crew__item .hit {
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -1029,11 +1016,7 @@ textarea:focus {
 .crew__idea__vote__vote .hit,
 .crew__idea__vote .hit,
 .crew__item__vote__vote .hit,
-.crew__item__vote .hit,
-.request__item__vote__vote .hit,
-.request__item__vote .hit,
-.permission__item__vote__vote .hit,
-.permission__item__vote .hit {
+.crew__item__vote .hit {
   background-color: #273444;
   color: #fff;
   display: flex;
@@ -1062,10 +1045,6 @@ textarea:focus {
 .crew__idea__vote .hit:hover,
 .crew__item__vote__vote .hit:hover,
 .crew__item__vote .hit:hover,
-.request__item__vote__vote .hit:hover,
-.request__item__vote .hit:hover,
-.permission__item__vote__vote .hit:hover,
-.permission__item__vote .hit:hover,
 .mypage__card__vote .hit:focus,
 .mypage__card__vote__vote .hit:focus,
 .myidea__config__vote__vote .hit:focus,
@@ -1084,10 +1063,6 @@ textarea:focus {
 .crew__idea__vote .hit:focus,
 .crew__item__vote__vote .hit:focus,
 .crew__item__vote .hit:focus,
-.request__item__vote__vote .hit:focus,
-.request__item__vote .hit:focus,
-.permission__item__vote__vote .hit:focus,
-.permission__item__vote .hit:focus,
 .mypage__card__vote .hit:active,
 .mypage__card__vote__vote .hit:active,
 .myidea__config__vote__vote .hit:active,
@@ -1105,11 +1080,7 @@ textarea:focus {
 .crew__idea__vote__vote .hit:active,
 .crew__idea__vote .hit:active,
 .crew__item__vote__vote .hit:active,
-.crew__item__vote .hit:active,
-.request__item__vote__vote .hit:active,
-.request__item__vote .hit:active,
-.permission__item__vote__vote .hit:active,
-.permission__item__vote .hit:active {
+.crew__item__vote .hit:active {
   background-color: #1d2b3c;
 }
 .mypage__card__vote .hit h4,
@@ -1129,11 +1100,7 @@ textarea:focus {
 .crew__idea__vote__vote .hit h4,
 .crew__idea__vote .hit h4,
 .crew__item__vote__vote .hit h4,
-.crew__item__vote .hit h4,
-.request__item__vote__vote .hit h4,
-.request__item__vote .hit h4,
-.permission__item__vote__vote .hit h4,
-.permission__item__vote .hit h4 {
+.crew__item__vote .hit h4 {
   padding-top: 50px;
   font-weight: 400;
   background-image: url("../../assets/icon-add@2x.png");
@@ -1210,8 +1177,7 @@ textarea:focus {
 .subcard,
 .comment__item,
 .team__item,
-.crew__item .idea__user,
-.permission__item .idea__user {
+.crew__item .idea__user {
   padding: 15px;
   border-radius: 4px;
   background-color: #f9fafc;
@@ -1219,8 +1185,7 @@ textarea:focus {
 .team .subcard,
 .team .comment__item,
 .team .team__item,
-.team .crew__item .idea__user,
-.team .permission__item .idea__user {
+.team .crew__item .idea__user {
   display: flex;
   flex-direction: row;
   background-color: #eff2f7;
@@ -1278,13 +1243,11 @@ textarea:focus {
   margin-bottom: 20px;
 }
 .team__item,
-.crew__item .idea__user,
-.permission__item .idea__user {
+.crew__item .idea__user {
   justify-content: space-between;
 }
 .team__item:not(:last-child),
-.crew__item .idea__user:not(:last-child),
-.permission__item .idea__user:not(:last-child) {
+.crew__item .idea__user:not(:last-child) {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
@@ -1329,9 +1292,7 @@ textarea:focus {
     padding-left: 17px;
   }
 }
-.crew__list,
-.request__list,
-.permission__list {
+.crew__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1339,8 +1300,7 @@ textarea:focus {
   width: 100%;
   margin-top: 40px;
 }
-.crew__item .idea__user,
-.permission__item .idea__user {
+.crew__item .idea__user {
   justify-content: flex-start;
   background-color: #f4f8fe;
 }
@@ -1355,60 +1315,6 @@ textarea:focus {
   text-align: center;
   font-size: 13px;
   color: #979797;
-}
-.request__list,
-.permission__list {
-  margin-top: 0;
-}
-.request__item .hit,
-.permission__item .hit {
-  background-color: #f2f1f7;
-}
-.request__item .idea__user,
-.permission__item .idea__user {
-  position: relative;
-}
-.request__item .status,
-.permission__item .status {
-  font-size: 13px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  color: #4883ff;
-  transform: translateY(-50%);
-}
-.request__item.rejected .hit,
-.permission__item.rejected .hit {
-  opacity: 0.2;
-  text-decoration: line-through;
-}
-.request__item.rejected .hit .status,
-.permission__item.rejected .hit .status {
-  color: #979797;
-}
-.request__item.rejected .hit:hover,
-.permission__item.rejected .hit:hover {
-  box-shadow: none;
-}
-@media (min-width: 993px) {
-  .permission__item {
-    width: 33.33333333333333%;
-    padding: 0 10px;
-    position: relative;
-    left: 0%;
-  }
-  .permission__item:nth-child(2n-1) {
-    margin-left: 16.666666666666664%;
-  }
-}
-.permission__item .idea__user {
-  background-color: #f2f1f7;
-}
-.permission__control {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
 }
 .proposal__contents {
   width: 100%;
@@ -1953,6 +1859,91 @@ textarea:focus {
   border-radius: 100px;
   border: 1px solid rgba(72,131,255,0.8);
   color: rgba(72,131,255,0.8);
+}
+#view__header {
+  text-align: center;
+}
+.view__summary,
+.view__utility {
+  width: 100%;
+  padding: 0 10px;
+}
+.view__utility {
+  margin-bottom: 80px;
+}
+.view__title {
+  font-family: 'KoPub Batang';
+  font-size: 40px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.view__author {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.btn--vote,
+.btn--like {
+  white-space: nowrap;
+  width: auto !important;
+  line-height: 1;
+}
+.work {
+  width: 100%;
+  padding: 0 10px;
+}
+.work__img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  .work__img {
+    width: 80%;
+  }
+}
+@media (min-width: 993px) {
+  .work__img {
+    width: 60%;
+  }
+}
+.work__desc {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.work__desc p {
+  margin-bottom: 1rem;
+}
+.comments {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.comments__heading {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.comments__list {
+  margin-bottom: 100px;
+}
+.comments__list li {
+  margin-bottom: 30px;
+}
+.comments__list .comment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.comments__list .comment h5 {
+  margin-right: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.comments__list .comment p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .about {
   padding: 80px 0;
