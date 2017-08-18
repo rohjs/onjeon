@@ -141,7 +141,9 @@ textarea:focus {
 .apply__body #header,
 .mypage #header,
 .notice #header,
-.view #header {
+.view #header,
+.ni #header,
+.signup #header {
   padding-bottom: 80px;
   background-image: none;
 }
@@ -162,6 +164,8 @@ textarea:focus {
   }
 }
 .header__contents .title {
+  font-family: 'KoPub Batang';
+  font-size: 40px;
   margin-top: 64px;
   margin-bottom: 24px;
 }
@@ -696,7 +700,8 @@ textarea:focus {
 }
 .btn__register,
 .btn__submit,
-.reply__edit button {
+.reply__edit button,
+.signup .btn__login {
   padding: 16px;
   line-height: 1;
   position: relative;
@@ -709,16 +714,19 @@ textarea:focus {
 .btn__register:hover,
 .btn__submit:hover,
 .reply__edit button:hover,
+.signup .btn__login:hover,
 .btn__register:focus,
 .btn__submit:focus,
-.reply__edit button:focus {
+.reply__edit button:focus,
+.signup .btn__login:focus {
   background-color: rgba(72,131,255,0.95);
   color: #fff;
 }
 @media screen and (max-width: 399px) {
   .btn__register,
   .btn__submit,
-  .reply__edit button {
+  .reply__edit button,
+  .signup .btn__login {
     width: 100%;
     margin-top: 20px;
     text-align: center;
@@ -735,7 +743,8 @@ textarea:focus {
 }
 .btn--subscribe,
 .btn--vote,
-.btn--like {
+.btn--like,
+.signup #header .btn__submit {
   display: inline-block;
   padding: 16px;
   line-height: 1;
@@ -750,9 +759,11 @@ textarea:focus {
 .btn--subscribe:hover,
 .btn--vote:hover,
 .btn--like:hover,
+.signup #header .btn__submit:hover,
 .btn--subscribe:focus,
 .btn--vote:focus,
-.btn--like:focus {
+.btn--like:focus,
+.signup #header .btn__submit:focus {
   background-color: rgba(72,131,255,0.95);
   color: #fff;
 }
@@ -1812,7 +1823,7 @@ textarea:focus {
 }
 .notice__list li {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   border-bottom: 1px solid #d6d9de;
   margin-bottom: 40px;
 }
@@ -1864,37 +1875,51 @@ textarea:focus {
   text-align: center;
 }
 .view__summary,
-.view__utility {
+.view__utility,
+.ni__summary {
   width: 100%;
   padding: 0 10px;
 }
 .view__utility {
   margin-bottom: 80px;
 }
-.view__title {
+.view__title,
+.ni__title {
+  margin-top: 64px;
   font-family: 'KoPub Batang';
   font-size: 40px;
   line-height: 1.4;
   margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
-.view__author {
+.view__author,
+.ni__date {
   font-size: 1rem;
   font-weight: 400;
 }
 .btn--vote,
-.btn--like {
+.btn--like,
+.signup #header .btn__submit {
   white-space: nowrap;
   width: auto !important;
   line-height: 1;
 }
-.work {
+.work,
+.ni__content {
   width: 100%;
   padding: 0 10px;
+}
+.ni__content {
+  margin-top: 80px;
 }
 .work__img {
   width: 100%;
   height: auto;
   margin: 0 auto;
+}
+.work__img img {
+  width: 100%;
+  height: auto;
 }
 @media (min-width: 769px) {
   .work__img {
@@ -1906,18 +1931,30 @@ textarea:focus {
     width: 60%;
   }
 }
-.work__desc {
+.work__desc,
+.ni__desc {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 60px;
 }
-.work__desc p {
+.work__desc p,
+.ni__desc p {
   margin-bottom: 1rem;
 }
+@media (max-width: 768px) {
+  .ni__desc {
+    width: 100%;
+  }
+}
 .comments {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 60px;
+}
+@media (min-width: 993px) {
+  .comments {
+    width: 60%;
+  }
 }
 .comments__heading {
   font-weight: 400;
@@ -1944,6 +1981,55 @@ textarea:focus {
 .comments__list .comment p {
   font-size: 1rem;
   line-height: 1.5;
+}
+.comments__list .comment .comment__date {
+  color: #979797;
+  width: 100%;
+  margin-top: 4px;
+}
+.signup #header {
+  text-align: center;
+}
+.signup #header .header__contents {
+  width: 100%;
+}
+.signup #main .row {
+  width: auto;
+  justify-content: center;
+  padding-top: 80px;
+}
+.signup .signup__form {
+  width: 100%;
+  padding: 0 10px;
+}
+@media (min-width: 769px) {
+  .signup .signup__form {
+    width: 66.66666666666666%;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 993px) {
+  .signup .signup__form {
+    width: 50%;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 1201px) {
+  .signup .signup__form {
+    width: 33.33333333333333%;
+    padding: 0 10px;
+  }
+}
+.signup .signup__form input {
+  width: 100%;
+  margin-bottom: 6px;
+}
+.signup .btn__login {
+  width: 100%;
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+  right: 0;
 }
 .about {
   padding: 80px 0;
@@ -2002,17 +2088,12 @@ textarea:focus {
   }
 }
 .about__list {
-  margin-top: 60px;
+  margin-top: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 80px;
-}
-@media (min-width: 769px) {
-  .about__list {
-    margin-top: 120px;
-  }
 }
 .about__list li {
   width: 100%;
