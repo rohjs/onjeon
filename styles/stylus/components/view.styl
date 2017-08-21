@@ -99,13 +99,17 @@
     @extend .btn--vote
 
 .signup
+  .title
+    white-space: nowrap
   #main
     .row
-      w(auto)
       jc(center)
       pt($unit * 4)
+      pb($unit * 6)
   .signup__form
     col(12)
+    flex()
+    flex-direction column
     +afterTablet()
       col(8)
     +afterDesktop()
@@ -113,7 +117,6 @@
     +afterWide()
       col(4)
     input
-      w()
       mb(6px)
   .btn__login
     @extend .btn__register
@@ -122,3 +125,4 @@
     pr(0)
     pl(0)
     r()
+    mt(24px)

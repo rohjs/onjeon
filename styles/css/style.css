@@ -1871,6 +1871,21 @@ textarea:focus {
   border: 1px solid rgba(72,131,255,0.8);
   color: rgba(72,131,255,0.8);
 }
+.signup__etc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  white-space: nowrap;
+  color: rgba(72,131,255,0.8);
+  margin-top: 32px;
+}
+.signup__etc :first-child {
+  margin-right: 16px;
+}
+.signup__form label {
+  display: block;
+  margin-bottom: 8px;
+}
 #view__header {
   text-align: center;
 }
@@ -1993,14 +2008,20 @@ textarea:focus {
 .signup #header .header__contents {
   width: 100%;
 }
+.signup .title {
+  white-space: nowrap;
+}
 .signup #main .row {
-  width: auto;
   justify-content: center;
   padding-top: 80px;
+  padding-bottom: 120px;
 }
 .signup .signup__form {
   width: 100%;
   padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
 }
 @media (min-width: 769px) {
   .signup .signup__form {
@@ -2021,7 +2042,6 @@ textarea:focus {
   }
 }
 .signup .signup__form input {
-  width: 100%;
   margin-bottom: 6px;
 }
 .signup .btn__login {
@@ -2030,6 +2050,7 @@ textarea:focus {
   padding-right: 0;
   padding-left: 0;
   right: 0;
+  margin-top: 24px;
 }
 .about {
   padding: 80px 0;
